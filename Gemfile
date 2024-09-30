@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.0'
 
+gem 'unicorn'  # 追記
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.7.7'
 # Use postgresql as the database for Active Record
@@ -43,6 +45,7 @@ group :development do
   gem "capistrano", "~> 3.10", require: false # 追記
   gem "capistrano-rails", "~> 1.6", require: false # 追記
   gem 'capistrano-safe-deploy-to' # 追記
+  gem 'capistrano3-unicorn'
 end
 
 group :test do
